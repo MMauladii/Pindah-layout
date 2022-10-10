@@ -2,6 +2,7 @@ package com.example.pindahlayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 public class SecondActivity extends AppCompatActivity {
@@ -12,5 +13,11 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
 
         getSupportActionBar().setTitle("Layout B");
+
+        tvNama = findViewById(R.id.tv_nama);
+
+        Intent terima = getIntent();
+        String yNama = terima.getStringExtra("xNama");
+        tvNama.setText(yNama);
     }
 }

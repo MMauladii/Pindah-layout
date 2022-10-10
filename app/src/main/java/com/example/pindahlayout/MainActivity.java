@@ -25,8 +25,14 @@ public class MainActivity extends AppCompatActivity {
         btnPindah.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String nama = etNama.getText().toString();
+
+                if (nama.trim().equals("")){
+                    etNama.setError("Nama Harus Diisi");
+                }
+                else {
                 Intent pindah = new Intent(MainActivity.this, SecondActivity.class);
-                startActivity(pindah);
+                pindah.putExtra("xNama", nama);
             }
         });
     }
