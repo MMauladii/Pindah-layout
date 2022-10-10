@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
                 else {
                     Intent pindah = new Intent(MainActivity.this, SecondActivity.class);
                     pindah.putExtra("xNama", nama);
-                    pindah.putExtra();
                     startActivity(pindah);
                 }
             }
